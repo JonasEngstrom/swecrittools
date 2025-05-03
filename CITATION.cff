@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+title: 'swecrittools: Tools for Analysis of the Swecrit Databases'
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file or using the
+  citation("swecrittools") command in R.
+type: software
+authors:
+  - given-names: Jonas
+    family-names: Engström
+    name-suffix: M.D.
+    orcid: 'https://orcid.org/0000-0003-1421-3640'
+    affiliation: Lund University
+    email: jonas.engstrom@med.lu.se
+repository-code: 'https://github.com/JonasEngstrom/swecrittools'
+abstract: >-
+  A collection of tools and functions used in studies of the
+  Swecrit databases. As many tasks are repeated between
+  studies, functions to handle them are provided in this
+  package to reduce repetition of code.
+license: MIT
+version: 0.1.0
