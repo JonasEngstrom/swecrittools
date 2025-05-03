@@ -1,0 +1,19 @@
+Package: swecrittools
+Type: Package
+Title: Tools for Analysis of the Swecrit Databases
+Version: 0.1.0
+Authors@R: c(
+    person(
+      "Jonas", "Engström",
+      email = "jonas.engstrom@med.lu.se",
+      role = c("aut", "cre"),
+      comment = c(ORCID = "0000-0003-1421-3640")
+    )
+  )
+Description: A collection of tools and functions used in studies of the Swecrit
+    databases. As many tasks are repeated between studies, functions to handle
+    them are provided in this package to reduce repetition of code.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.3.2
