@@ -1,6 +1,6 @@
 Package: swecrittools
 Type: Package
-Title: Tools Used for Analysis of the Swecrit Databases
+Title: Tools for Analysis of the Swecrit Databases
 Version: 0.1.0
 Authors@R: c(
     person(

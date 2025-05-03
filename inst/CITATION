@@ -1,0 +1,10 @@
+bibentry(
+  bibtype = "Manual",
+  title = "swecrittools: Tools for Analysis of the Swecrit Databases",
+  author = person("Jonas", "Engström"),
+  organization = "Lund University",
+  address = "Lund, Sweden",
+  year = 2025,
+  note = "R package version 0.1.0",
+  url = "https://github.com/JonasEngstrom/swecrittools"
+)
