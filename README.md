@@ -1,6 +1,6 @@
 # `swecrittools`—Tools Used for Analysis of Swecrit Databases
 
-A collection of tools and functions used in studies of the Swecrit databases^1^. As many tasks are repeated between studies, functions to handle them are provided in this package to reduce repetition of code.
+A collection of tools and functions used in studies of the Swecrit databases<sup>1</sup>. As many tasks are repeated between studies, functions to handle them are provided in this package to reduce repetition of code.
 
 ## References
 
