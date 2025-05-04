@@ -19,3 +19,7 @@ LazyData: true
 RoxygenNote: 7.3.2
 Depends: 
     R (>= 3.5)
+Suggests: 
+    stringr (>= 1.5.1),
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
