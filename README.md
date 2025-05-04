@@ -1,5 +1,6 @@
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/JonasEngstrom/swecrittools/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/JonasEngstrom/swecrittools/actions/workflows/R-CMD-check.yaml)
+[![Codecov test coverage](https://codecov.io/gh/JonasEngstrom/swecrittools/graph/badge.svg)](https://app.codecov.io/gh/JonasEngstrom/swecrittools)
 <!-- badges: end -->
 
 # `swecrittools`—Tools Used for Analysis of Swecrit Databases
