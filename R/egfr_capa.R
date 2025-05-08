@@ -5,7 +5,6 @@
 #' \eqn{\text{eGFR} = 130 \times \text{cystatin C}^{-1.069} \times \text{age}^{-0,117} - 7}
 #'
 #' @references 1. Grubb A, Horio M, Hansson LO, Björk J, Nyman U, Flodin M, et al. Generation of a new cystatin C-based estimating equation for glomerular filtration reate by use of 7 assays standardized to the international calibrator. Clinical Chemistry. 2014 Jul 1;60(7):974–86.
-
 #'
 #' @param cystatin_c Plasma cystatin C in mg/l.
 #' @param age Age in years.
