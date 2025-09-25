@@ -21,7 +21,7 @@ kva_codes <-
 
 kva_codes_dialysis_catheter <-
   kva_codes |>
-  filter(
+  dplyr::filter(
     stringr::str_detect(
       Titel,
       stringr::regex(
@@ -30,22 +30,22 @@ kva_codes_dialysis_catheter <-
       )
     )
   ) |>
-  pull(Kod)
+  dplyr::pull(Kod)
 
 # Extract codes indicating dialysis treatment.
 
 kva_codes_dialysis_treatment <-
   kva_codes |>
-  filter(
+  dplyr::filter(
     stringr::str_detect(
       Titel,
       stringr::regex(
-        '^(?!.*peritoneal)(?!.*kateter)(?!.*fistel)(?!.*lever)(?!.*cyklo)(?!.*CVK)(?=.*dialys)',
+        '^(?!.*peritoneal)(?!.*kateter)(?!.*fistel)(?!.*lever)(?!.*cyklo)(?!.*CVK)(?=.*(?:dialys|filtration))',
         ignore_case = TRUE
       )
     )
   ) |>
-  pull(Kod)
+  dplyr::pull(Kod)
 
 # Store variables in package data.
 
