@@ -40,7 +40,7 @@ kva_codes_dialysis_treatment <-
     stringr::str_detect(
       Titel,
       stringr::regex(
-        '^(?!.*peritoneal)(?!.*kateter)(?!.*fistel)(?!.*lever)(?!.*cyklo)(?!.*CVK)(?=.*(?:dialys|filtration))',
+        '^(?!.*peritoneal)(?!.*kateter)(?!.*fistel)(?!.*lever)(?!.*cyklo)(?!.*CVK)(?!.*anestesi)(?!.*operation)(?=.*(?:dialys|filtration))',
         ignore_case = TRUE
       )
     )

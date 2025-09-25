@@ -5,7 +5,7 @@
 \alias{kva_codes_dialysis_treatment}
 \title{Swedish Procedure (KVÅ) Codes Regarding Hemodialysis Treatment}
 \format{
-An object of class \code{character} of length 13.
+An object of class \code{character} of length 10.
 }
 \source{
 \url{https://www.socialstyrelsen.se/globalassets/sharepoint-dokument/dokument-webb/klassifikationer-och-koder/kva-inkl-beskrivningstexter.xlsx}
