@@ -20,6 +20,7 @@ A list of \href{https://www.socialstyrelsen.se/statistik-och-data/klassifikation
 The codes included in the list represent the following procedures.\tabular{ll}{
    \strong{Code} \tab \strong{Description} \cr
    FXP00 \tab Hemofiltration eller hemodialys under kardiopulmonal bypass \cr
+   DR014 \tab Hemodiafiltration (HDF) \cr
    DR015 \tab Hemodialys, akut \cr
    DR016 \tab Hemodialys, kronisk \cr
    DR055 \tab Citratdialys \cr

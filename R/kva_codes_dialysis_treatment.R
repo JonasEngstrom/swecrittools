@@ -7,6 +7,7 @@
 #' |**Code**|**Description**|
 #' |-|-|
 #' |FXP00|Hemofiltration eller hemodialys under kardiopulmonal bypass|
+#' |DR014|Hemodiafiltration (HDF)|
 #' |DR015|Hemodialys, akut|
 #' |DR016|Hemodialys, kronisk|
 #' |DR055|Citratdialys|
