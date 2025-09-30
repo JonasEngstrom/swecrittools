@@ -28,6 +28,9 @@ Calculate estimated glomerular filtration rate (eGFR) using the Revised Lund-Mal
    Male \tab ≥180 \tab \eqn{X = 2.56 - 0.926 \times \ln (\frac{\text{creatinine}}{180})} \cr
 }
 }
+\examples{
+egfr_lm_revised(50, 23, TRUE)
+}
 \references{
 \enumerate{
 \item Björk J, Grubb A, Sterner G, Nyman U. Revised equations for estimating glomerular filtration rate based on the Lund-Malmö Study cohort. Scandinavian Journal of Clinical and Laboratory Investigation. 2011 May;71(3):232–9.

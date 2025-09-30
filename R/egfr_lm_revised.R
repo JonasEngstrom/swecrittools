@@ -23,6 +23,7 @@
 #' @md
 #'
 #' @examples
+#' egfr_lm_revised(50, 23, TRUE)
 egfr_lm_revised <- function(creatinine, age, female) {
   x <-
     switch (ifelse(female, 'female', 'male'),
