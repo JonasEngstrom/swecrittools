@@ -26,18 +26,21 @@
 #' egfr_lm_revised(50, 23, TRUE)
 egfr_lm_revised <- function(creatinine, age, female) {
   x <-
-    switch (ifelse(female, 'female', 'male'),
-      'female' = switch (ifelse(creatinine < 150, 'high_creatinine', 'low_creatinine'),
-        'high_creatinine' = function(creatinine) 2.50 + 0.0121 * (150 - creatinine),
-        'low_creatinine' = function(creatinine) 2.50 - 0.926 * log(creatinine / 150)
+    ifelse(
+      female,
+      ifelse(
+        creatinine < 150,
+        2.50 + 0.0121 * (150 - creatinine),
+        2.50 - 0.926 * log(creatinine / 150)
       ),
-      'male' = switch (ifelse(creatinine < 180, 'high_creatinine', 'low_creatinine'),
-        'high_creatinine' = function(creatinine) 2.56 + 0.00968 * (180 - creatinine),
-        'low_creatinine' = function(creatinine) 2.56 - 0.926 * log(creatinine / 180)
+      ifelse(
+        creatinine < 180,
+        2.56 + 0.00968 * (180 - creatinine),
+        2.56 - 0.926 * log(creatinine / 180)
       )
     )
 
-  egfr <- exp(x(creatinine) - 0.0158 * age + 0.438 * log(age))
+  egfr <- exp(x - 0.0158 * age + 0.438 * log(age))
 
   return(egfr)
 }
