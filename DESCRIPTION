@@ -24,6 +24,7 @@ Imports:
 Suggests:
     dplyr (>= 1.1.4),
     mice (>= 3.18.0),
+    rlang (>= 1.1.6),
     stats (>= 4.5.1),
     stringr (>= 1.5.1),
     tibble (>= 3.3.0),
