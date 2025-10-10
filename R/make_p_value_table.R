@@ -26,7 +26,7 @@ make_p_value_table <- function(tibble_to_analyze, dependent_variable, independen
   tibble_to_analyze |>
 
     # Fit a generalized linear model with list of independent variables predicting dependent variable.
-    (\(x) stats::glm(stats::formula(paste(dependent_variable, ' ~ ', paste(independent_variables, collapse = ' + '))), data = x))() |>
+    (\(x) stats::glm(stats::formula(paste(dependent_variable, ' ~ ', paste(independent_variables[independent_variables != '(Intercept)'], collapse = ' + '))), data = x))() |>
     summary() |>
 
     # Extract coefficients and terms.
