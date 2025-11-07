@@ -10,7 +10,7 @@
 #'
 #' |Name of Returned Value|Description|
 #' |-|-|
-#' |total_population|\eqn{real\_positives + real\_negatives}|
+#' |[total_population](https://en.wikipedia.org/wiki/Statistical_population)|\eqn{real\_positives + real\_negatives}|
 #' |||
 #' |real_positives|The number of people with the condition in the population.|
 #' |||
@@ -18,45 +18,45 @@
 #' |||
 #' |true_positives<br>hits|The number of people with the condition with a positive test result.|
 #' |||
-#' |false_positives<br>false_alarms<br>overestimations|The number of people without the condition with a positive test result.|
+#' |[false_positives](https://en.wikipedia.org/wiki/False_positives_and_false_negatives)<br>false_alarms<br>overestimations|The number of people without the condition with a positive test result.|
 #' |||
 #' |true_negatives<br>correct_rejections|The number of people without the condition with a negative test result.|
 #' |||
-#' |false_negatives<br>misses<br>underestimations|The number of people without the condition with a positive test result.|
+#' |[false_negatives](https://en.wikipedia.org/wiki/False_positives_and_false_negatives)<br>misses<br>underestimations|The number of people without the condition with a positive test result.|
 #' |||
 #' |predicted_positive<br>test_outcome_positive|\eqn{true\_positives + false\_positives}|
 #' |||
 #' |predicted_negative<br>test_outcome_negative|\eqn{true\_negatives + false\_negatives}|
 #' |||
-#' |accuracy|\eqn{\frac{true\_positives + true\_negatives}{real\_positives + real\_negatives}}|
+#' |[accuracy](https://en.wikipedia.org/wiki/Accuracy_and_precision#In_classification)|\eqn{\frac{true\_positives + true\_negatives}{real\_positives + real\_negatives}}|
 #' |||
-#' |true_positive_rate<br>recall<br>sensitivity<br>probability_of_detection<br>hit_rate<br>power|\eqn{\frac{true\_positives}{real\_positives} = 1 - false\_negative\_rate}|
+#' |true_positive_rate<br>[recall](https://en.wikipedia.org/wiki/Precision_and_recall)<br>[sensitivity](https://en.wikipedia.org/wiki/Sensitivity_and_specificity)<br>probability_of_detection<br>hit_rate<br>[power](https://en.wikipedia.org/wiki/Power_(statistics))|\eqn{\frac{true\_positives}{real\_positives} = 1 - false\_negative\_rate}|
 #' |||
-#' |false_negative_rate<br>miss_rate<br>type_II_errors|\eqn{\frac{false\_negatives}{real\_positives} = 1 - true\_positive\_rate}|
+#' |false_negative_rate<br>miss_rate<br>[type_II_errors](https://en.wikipedia.org/wiki/Type_I_and_type_II_errors)|\eqn{\frac{false\_negatives}{real\_positives} = 1 - true\_positive\_rate}|
 #' |||
-#' |false_positive_rate<br>probability_of_false_alarm<br>fall_out<br>type_I_errors|\eqn{\frac{false\_positives}{real\_negatives} = 1 - true\_negative\_rate}|
+#' |[false_positive_rate](https://en.wikipedia.org/wiki/False_positive_rate)<br>probability_of_false_alarm<br>[fall_out](https://en.wikipedia.org/wiki/Evaluation_measures_(information_retrieval)#Fall-out)<br>[type_I_errors](https://en.wikipedia.org/wiki/Type_I_and_type_II_errors)|\eqn{\frac{false\_positives}{real\_negatives} = 1 - true\_negative\_rate}|
 #' |||
-#' |true_negative_rate<br>specificity<br>selectivity|\eqn{\frac{true\_negatives}{real\_negatives} = 1 - false\_positive\_rate}|
+#' |true_negative_rate<br>[specificity](https://en.wikipedia.org/wiki/Sensitivity_and_specificity)<br>selectivity|\eqn{\frac{true\_negatives}{real\_negatives} = 1 - false\_positive\_rate}|
 #' |||
-#' |prevalence|\eqn{\frac{real\_positives}{real\_positives + real\_negatives}}|
+#' |[prevalence](https://en.wikipedia.org/wiki/Prevalence)|\eqn{\frac{real\_positives}{real\_positives + real\_negatives}}|
 #' |||
-#' |positive_predictive_value<br>precision|\eqn{\frac{true\_positives}{true\_positives + false\_positives} = 1 - false\_discovery\_rate}|
+#' |[positive_predictive_value](https://en.wikipedia.org/wiki/Positive_and_negative_predictive_values)<br>[precision](https://en.wikipedia.org/wiki/Precision_and_recall)|\eqn{\frac{true\_positives}{true\_positives + false\_positives} = 1 - false\_discovery\_rate}|
 #' |||
-#' |f1_score|\eqn{2 \times \frac{positive\_predictive\_value \times true\_positive\_rate}{positive\_predictive\_value + true\_positive\_rate} = \frac{2 \times true\_positives}{2 \times true\_positives + false\_positives + false\_negatives}}|
+#' |[f1_score](https://en.wikipedia.org/wiki/F-score)|\eqn{2 \times \frac{positive\_predictive\_value \times true\_positive\_rate}{positive\_predictive\_value + true\_positive\_rate} = \frac{2 \times true\_positives}{2 \times true\_positives + false\_positives + false\_negatives}}|
 #' |||
 #' |false_omission_rate|\eqn{\frac{false\_negatives}{true\_negatives + false\_negatives} = 1 - negative\_predictive\_value}|
 #' |||
-#' |positive_likelihood_ratio|\eqn{\frac{true\_positive\_rate}{false\_positive\_rate}}|
+#' |[positive_likelihood_ratio](https://en.wikipedia.org/wiki/Likelihood_ratios_in_diagnostic_testing)|\eqn{\frac{true\_positive\_rate}{false\_positive\_rate}}|
 #' |||
-#' |negative_likelihood_ratio|\eqn{\frac{false\_negative\_rate}{true\_negative\_rate}}|
+#' |[negative_likelihood_ratio](https://en.wikipedia.org/wiki/Likelihood_ratios_in_diagnostic_testing)|\eqn{\frac{false\_negative\_rate}{true\_negative\_rate}}|
 #' |||
-#' |false_discovery_rate|\eqn{\frac{false\_positives}{true\_positives + false\_positives} = 1 - positive\_predictive\_value}|
+#' |[false_discovery_rate](https://en.wikipedia.org/wiki/False_discovery_rate)|\eqn{\frac{false\_positives}{true\_positives + false\_positives} = 1 - positive\_predictive\_value}|
 #' |||
-#' |negative_predictive_value|\eqn{\frac{true\_negatives}{true\_negatives + false\_negatives} = 1 - false\_omission\_rate}|
+#' |[negative_predictive_value](https://en.wikipedia.org/wiki/Positive_and_negative_predictive_values)|\eqn{\frac{true\_negatives}{true\_negatives + false\_negatives} = 1 - false\_omission\_rate}|
 #' |||
-#' |diagnostic_odds_ratio|\eqn{\frac{positive\_likelihood\_ratio}{negative\_likelihood\_ratio}}|
+#' |[diagnostic_odds_ratio](https://en.wikipedia.org/wiki/Diagnostic_odds_ratio)|\eqn{\frac{positive\_likelihood\_ratio}{negative\_likelihood\_ratio}}|
 #' |||
-#' |informedness<br>bookmaker_informedness|\eqn{true\_positive\_rate + true\_negative\_rate - 1}|
+#' |[informedness](https://en.wikipedia.org/wiki/Youden%27s_J_statistic#Other_metrics)<br>[bookmaker_informedness](https://en.wikipedia.org/wiki/Youden%27s_J_statistic#Other_metrics)|\eqn{true\_positive\_rate + true\_negative\_rate - 1}|
 #' |||
 #' |prevalence_threshold|\eqn{\frac{\sqrt{true\_positive\_rate \times false\_positive\_rate} - false\_positive\_rate}{true\_positive\_rate - false\_positive\_rate}}|
 #' |||
@@ -64,11 +64,11 @@
 #' |||
 #' |balanced_accuracy|\eqn{\frac{true\_positive\_rate + true\_negative\_rate}{2}}|
 #' |||
-#' |fowlkes_mallows_index|\eqn{\sqrt{positive\_predictive\_value \times true\_positive\_rate}}|
+#' |[fowlkes_mallows_index](https://en.wikipedia.org/wiki/Fowlkes–Mallows_index)|\eqn{\sqrt{positive\_predictive\_value \times true\_positive\_rate}}|
 #' |||
-#' |phi<br>matthews_correlation_coefficient|\eqn{\sqrt{true\_positive\_rate \times true\_negative\_rate \times positive\_predictive\_value \times negative\_predictive\_value} - \sqrt{false\_negative\_rate \times false\_positive\_rate \times false\_omission\_rate \times false\_discovery\_rate}}|
+#' |[phi](https://en.wikipedia.org/wiki/Phi_coefficient)<br>matthews_correlation_coefficient|\eqn{\sqrt{true\_positive\_rate \times true\_negative\_rate \times positive\_predictive\_value \times negative\_predictive\_value} - \sqrt{false\_negative\_rate \times false\_positive\_rate \times false\_omission\_rate \times false\_discovery\_rate}}|
 #' |||
-#' |threat_score<br>critical_success_index<br>jaccard_index|\eqn{\frac{true\_positives}{true\_positives + false\_negatives + false\_positives}}|
+#' |threat_score<br>critical_success_index<br>[jaccard_index](https://en.wikipedia.org/wiki/Jaccard_index#Jaccard_index_in_binary_classification_confusion_matrices)|\eqn{\frac{true\_positives}{true\_positives + false\_negatives + false\_positives}}|
 #'
 #' @param total_population The number of people in the entire population.
 #' @param real_positives The number of people with the condition in the population.

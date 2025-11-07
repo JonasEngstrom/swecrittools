@@ -42,7 +42,7 @@ Arguments are returned together with calculated values. Missing arguments are ca
 
 The following table lists the names of the variables returned by the function and describes how they are calculated.\tabular{ll}{
    Name of Returned Value \tab Description \cr
-   total_population \tab \eqn{real\_positives + real\_negatives} \cr
+   \href{https://en.wikipedia.org/wiki/Statistical_population}{total_population} \tab \eqn{real\_positives + real\_negatives} \cr
     \tab  \cr
    real_positives \tab The number of people with the condition in the population. \cr
     \tab  \cr
@@ -50,45 +50,45 @@ The following table lists the names of the variables returned by the function an
     \tab  \cr
    true_positives\if{html}{\out{<br>}}hits \tab The number of people with the condition with a positive test result. \cr
     \tab  \cr
-   false_positives\if{html}{\out{<br>}}false_alarms\if{html}{\out{<br>}}overestimations \tab The number of people without the condition with a positive test result. \cr
+   \href{https://en.wikipedia.org/wiki/False_positives_and_false_negatives}{false_positives}\if{html}{\out{<br>}}false_alarms\if{html}{\out{<br>}}overestimations \tab The number of people without the condition with a positive test result. \cr
     \tab  \cr
    true_negatives\if{html}{\out{<br>}}correct_rejections \tab The number of people without the condition with a negative test result. \cr
     \tab  \cr
-   false_negatives\if{html}{\out{<br>}}misses\if{html}{\out{<br>}}underestimations \tab The number of people without the condition with a positive test result. \cr
+   \href{https://en.wikipedia.org/wiki/False_positives_and_false_negatives}{false_negatives}\if{html}{\out{<br>}}misses\if{html}{\out{<br>}}underestimations \tab The number of people without the condition with a positive test result. \cr
     \tab  \cr
    predicted_positive\if{html}{\out{<br>}}test_outcome_positive \tab \eqn{true\_positives + false\_positives} \cr
     \tab  \cr
    predicted_negative\if{html}{\out{<br>}}test_outcome_negative \tab \eqn{true\_negatives + false\_negatives} \cr
     \tab  \cr
-   accuracy \tab \eqn{\frac{true\_positives + true\_negatives}{real\_positives + real\_negatives}} \cr
+   \href{https://en.wikipedia.org/wiki/Accuracy_and_precision#In_classification}{accuracy} \tab \eqn{\frac{true\_positives + true\_negatives}{real\_positives + real\_negatives}} \cr
     \tab  \cr
-   true_positive_rate\if{html}{\out{<br>}}recall\if{html}{\out{<br>}}sensitivity\if{html}{\out{<br>}}probability_of_detection\if{html}{\out{<br>}}hit_rate\if{html}{\out{<br>}}power \tab \eqn{\frac{true\_positives}{real\_positives} = 1 - false\_negative\_rate} \cr
+   true_positive_rate\if{html}{\out{<br>}}\href{https://en.wikipedia.org/wiki/Precision_and_recall}{recall}\if{html}{\out{<br>}}\href{https://en.wikipedia.org/wiki/Sensitivity_and_specificity}{sensitivity}\if{html}{\out{<br>}}probability_of_detection\if{html}{\out{<br>}}hit_rate\if{html}{\out{<br>}}\href{https://en.wikipedia.org/wiki/Power_(statistics)}{power} \tab \eqn{\frac{true\_positives}{real\_positives} = 1 - false\_negative\_rate} \cr
     \tab  \cr
-   false_negative_rate\if{html}{\out{<br>}}miss_rate\if{html}{\out{<br>}}type_II_errors \tab \eqn{\frac{false\_negatives}{real\_positives} = 1 - true\_positive\_rate} \cr
+   false_negative_rate\if{html}{\out{<br>}}miss_rate\if{html}{\out{<br>}}\href{https://en.wikipedia.org/wiki/Type_I_and_type_II_errors}{type_II_errors} \tab \eqn{\frac{false\_negatives}{real\_positives} = 1 - true\_positive\_rate} \cr
     \tab  \cr
-   false_positive_rate\if{html}{\out{<br>}}probability_of_false_alarm\if{html}{\out{<br>}}fall_out\if{html}{\out{<br>}}type_I_errors \tab \eqn{\frac{false\_positives}{real\_negatives} = 1 - true\_negative\_rate} \cr
+   \href{https://en.wikipedia.org/wiki/False_positive_rate}{false_positive_rate}\if{html}{\out{<br>}}probability_of_false_alarm\if{html}{\out{<br>}}\href{https://en.wikipedia.org/wiki/Evaluation_measures_(information_retrieval)#Fall-out}{fall_out}\if{html}{\out{<br>}}\href{https://en.wikipedia.org/wiki/Type_I_and_type_II_errors}{type_I_errors} \tab \eqn{\frac{false\_positives}{real\_negatives} = 1 - true\_negative\_rate} \cr
     \tab  \cr
-   true_negative_rate\if{html}{\out{<br>}}specificity\if{html}{\out{<br>}}selectivity \tab \eqn{\frac{true\_negatives}{real\_negatives} = 1 - false\_positive\_rate} \cr
+   true_negative_rate\if{html}{\out{<br>}}\href{https://en.wikipedia.org/wiki/Sensitivity_and_specificity}{specificity}\if{html}{\out{<br>}}selectivity \tab \eqn{\frac{true\_negatives}{real\_negatives} = 1 - false\_positive\_rate} \cr
     \tab  \cr
-   prevalence \tab \eqn{\frac{real\_positives}{real\_positives + real\_negatives}} \cr
+   \href{https://en.wikipedia.org/wiki/Prevalence}{prevalence} \tab \eqn{\frac{real\_positives}{real\_positives + real\_negatives}} \cr
     \tab  \cr
-   positive_predictive_value\if{html}{\out{<br>}}precision \tab \eqn{\frac{true\_positives}{true\_positives + false\_positives} = 1 - false\_discovery\_rate} \cr
+   \href{https://en.wikipedia.org/wiki/Positive_and_negative_predictive_values}{positive_predictive_value}\if{html}{\out{<br>}}\href{https://en.wikipedia.org/wiki/Precision_and_recall}{precision} \tab \eqn{\frac{true\_positives}{true\_positives + false\_positives} = 1 - false\_discovery\_rate} \cr
     \tab  \cr
-   f1_score \tab \eqn{2 \times \frac{positive\_predictive\_value \times true\_positive\_rate}{positive\_predictive\_value + true\_positive\_rate} = \frac{2 \times true\_positives}{2 \times true\_positives + false\_positives + false\_negatives}} \cr
+   \href{https://en.wikipedia.org/wiki/F-score}{f1_score} \tab \eqn{2 \times \frac{positive\_predictive\_value \times true\_positive\_rate}{positive\_predictive\_value + true\_positive\_rate} = \frac{2 \times true\_positives}{2 \times true\_positives + false\_positives + false\_negatives}} \cr
     \tab  \cr
    false_omission_rate \tab \eqn{\frac{false\_negatives}{true\_negatives + false\_negatives} = 1 - negative\_predictive\_value} \cr
     \tab  \cr
-   positive_likelihood_ratio \tab \eqn{\frac{true\_positive\_rate}{false\_positive\_rate}} \cr
+   \href{https://en.wikipedia.org/wiki/Likelihood_ratios_in_diagnostic_testing}{positive_likelihood_ratio} \tab \eqn{\frac{true\_positive\_rate}{false\_positive\_rate}} \cr
     \tab  \cr
-   negative_likelihood_ratio \tab \eqn{\frac{false\_negative\_rate}{true\_negative\_rate}} \cr
+   \href{https://en.wikipedia.org/wiki/Likelihood_ratios_in_diagnostic_testing}{negative_likelihood_ratio} \tab \eqn{\frac{false\_negative\_rate}{true\_negative\_rate}} \cr
     \tab  \cr
-   false_discovery_rate \tab \eqn{\frac{false\_positives}{true\_positives + false\_positives} = 1 - positive\_predictive\_value} \cr
+   \href{https://en.wikipedia.org/wiki/False_discovery_rate}{false_discovery_rate} \tab \eqn{\frac{false\_positives}{true\_positives + false\_positives} = 1 - positive\_predictive\_value} \cr
     \tab  \cr
-   negative_predictive_value \tab \eqn{\frac{true\_negatives}{true\_negatives + false\_negatives} = 1 - false\_omission\_rate} \cr
+   \href{https://en.wikipedia.org/wiki/Positive_and_negative_predictive_values}{negative_predictive_value} \tab \eqn{\frac{true\_negatives}{true\_negatives + false\_negatives} = 1 - false\_omission\_rate} \cr
     \tab  \cr
-   diagnostic_odds_ratio \tab \eqn{\frac{positive\_likelihood\_ratio}{negative\_likelihood\_ratio}} \cr
+   \href{https://en.wikipedia.org/wiki/Diagnostic_odds_ratio}{diagnostic_odds_ratio} \tab \eqn{\frac{positive\_likelihood\_ratio}{negative\_likelihood\_ratio}} \cr
     \tab  \cr
-   informedness\if{html}{\out{<br>}}bookmaker_informedness \tab \eqn{true\_positive\_rate + true\_negative\_rate - 1} \cr
+   \href{https://en.wikipedia.org/wiki/Youden\%27s_J_statistic#Other_metrics}{informedness}\if{html}{\out{<br>}}\href{https://en.wikipedia.org/wiki/Youden\%27s_J_statistic#Other_metrics}{bookmaker_informedness} \tab \eqn{true\_positive\_rate + true\_negative\_rate - 1} \cr
     \tab  \cr
    prevalence_threshold \tab \eqn{\frac{\sqrt{true\_positive\_rate \times false\_positive\_rate} - false\_positive\_rate}{true\_positive\_rate - false\_positive\_rate}} \cr
     \tab  \cr
@@ -96,11 +96,11 @@ The following table lists the names of the variables returned by the function an
     \tab  \cr
    balanced_accuracy \tab \eqn{\frac{true\_positive\_rate + true\_negative\_rate}{2}} \cr
     \tab  \cr
-   fowlkes_mallows_index \tab \eqn{\sqrt{positive\_predictive\_value \times true\_positive\_rate}} \cr
+   \href{https://en.wikipedia.org/wiki/Fowlkes–Mallows_index}{fowlkes_mallows_index} \tab \eqn{\sqrt{positive\_predictive\_value \times true\_positive\_rate}} \cr
     \tab  \cr
-   phi\if{html}{\out{<br>}}matthews_correlation_coefficient \tab \eqn{\sqrt{true\_positive\_rate \times true\_negative\_rate \times positive\_predictive\_value \times negative\_predictive\_value} - \sqrt{false\_negative\_rate \times false\_positive\_rate \times false\_omission\_rate \times false\_discovery\_rate}} \cr
+   \href{https://en.wikipedia.org/wiki/Phi_coefficient}{phi}\if{html}{\out{<br>}}matthews_correlation_coefficient \tab \eqn{\sqrt{true\_positive\_rate \times true\_negative\_rate \times positive\_predictive\_value \times negative\_predictive\_value} - \sqrt{false\_negative\_rate \times false\_positive\_rate \times false\_omission\_rate \times false\_discovery\_rate}} \cr
     \tab  \cr
-   threat_score\if{html}{\out{<br>}}critical_success_index\if{html}{\out{<br>}}jaccard_index \tab \eqn{\frac{true\_positives}{true\_positives + false\_negatives + false\_positives}} \cr
+   threat_score\if{html}{\out{<br>}}critical_success_index\if{html}{\out{<br>}}\href{https://en.wikipedia.org/wiki/Jaccard_index#Jaccard_index_in_binary_classification_confusion_matrices}{jaccard_index} \tab \eqn{\frac{true\_positives}{true\_positives + false\_negatives + false\_positives}} \cr
 }
 }
 \examples{
