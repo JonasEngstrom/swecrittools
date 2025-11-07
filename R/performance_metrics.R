@@ -6,6 +6,69 @@
 #'
 #' Arguments are returned together with calculated values. Missing arguments are calculated, as far as sufficient data is provided. The function throws an error if insufficient data or contradictory data is provided.
 #'
+#' The following table lists the names of the variables returned by the function and describes how they are calculated.
+#'
+#' |Name of Returned Value|Description|
+#' |-|-|
+#' |total_population|\eqn{real\_positives + real\_negatives}|
+#' |||
+#' |real_positives|The number of people with the condition in the population.|
+#' |||
+#' |real_negatives|The number of people without the condition in the population.|
+#' |||
+#' |true_positives<br>hits|The number of people with the condition with a positive test result.|
+#' |||
+#' |false_positives<br>false_alarms<br>overestimations|The number of people without the condition with a positive test result.|
+#' |||
+#' |true_negatives<br>correct_rejections|The number of people without the condition with a negative test result.|
+#' |||
+#' |false_negatives<br>misses<br>underestimations|The number of people without the condition with a positive test result.|
+#' |||
+#' |predicted_positive<br>test_outcome_positive|\eqn{true\_positives + false\_positives}|
+#' |||
+#' |predicted_negative<br>test_outcome_negative|\eqn{true\_negatives + false\_negatives}|
+#' |||
+#' |accuracy|\eqn{\frac{true\_positives + true\_negatives}{real\_positives + real\_negatives}}|
+#' |||
+#' |true_positive_rate<br>recall<br>sensitivity<br>probability_of_detection<br>hit_rate<br>power|\eqn{\frac{true\_positives}{real\_positives} = 1 - false\_negative\_rate}|
+#' |||
+#' |false_negative_rate<br>miss_rate<br>type_II_errors|\eqn{\frac{false\_negatives}{real\_positives} = 1 - true\_positive\_rate}|
+#' |||
+#' |false_positive_rate<br>probability_of_false_alarm<br>fall_out<br>type_I_errors|\eqn{\frac{false\_positives}{real\_negatives} = 1 - true\_negative\_rate}|
+#' |||
+#' |true_negative_rate<br>specificity<br>selectivity|\eqn{\frac{true\_negatives}{real\_negatives} = 1 - false\_positive\_rate}|
+#' |||
+#' |prevalence|\eqn{\frac{real\_positives}{real\_positives + real\_negatives}}|
+#' |||
+#' |positive_predictive_value<br>precision|\eqn{\frac{true\_positives}{true\_positives + false\_positives} = 1 - false\_discovery\_rate}|
+#' |||
+#' |f1_score|\eqn{2 \times \frac{positive\_predictive\_value \times true\_positive\_rate}{positive\_predictive\_value + true\_positive\_rate} = \frac{2 \times true\_positives}{2 \times true\_positives + false\_positives + false\_negatives}}|
+#' |||
+#' |false_omission_rate|\eqn{\frac{false\_negatives}{true\_negatives + false\_negatives} = 1 - negative\_predictive\_value}|
+#' |||
+#' |positive_likelihood_ratio|\eqn{\frac{true\_positive\_rate}{false\_positive\_rate}}|
+#' |||
+#' |negative_likelihood_ratio|\eqn{\frac{false\_negative\_rate}{true\_negative\_rate}}|
+#' |||
+#' |false_discovery_rate|\eqn{\frac{false\_positives}{true\_positives + false\_positives} = 1 - positive\_predictive\_value}|
+#' |||
+#' |negative_predictive_value|\eqn{\frac{true\_negatives}{true\_negatives + false\_negatives} = 1 - false\_omission\_rate}|
+#' |||
+#' |diagnostic_odds_ratio|\eqn{\frac{positive\_likelihood\_ratio}{negative\_likelihood\_ratio}}|
+#' |||
+#' |informedness<br>bookmaker_informedness|\eqn{true\_positive\_rate + true\_negative\_rate - 1}|
+#' |||
+#' |prevalence_threshold|\eqn{\frac{\sqrt{true\_positive\_rate \times false\_positive\_rate} - false\_positive\_rate}{true\_positive\_rate - false\_positive\_rate}}|
+#' |||
+#' |markedness<br>delta_p|\eqn{positive\_predictive\_value + negative\_predictive\_value - 1}|
+#' |||
+#' |balanced_accuracy|\eqn{\frac{true\_positive\_rate + true\_negative\_rate}{2}}|
+#' |||
+#' |fowlkes_mallows_index|\eqn{\sqrt{positive\_predictive\_value \times true\_positive\_rate}}|
+#' |||
+#' |phi<br>matthews_correlation_coefficient|\eqn{\sqrt{true\_positive\_rate \times true\_negative\_rate \times positive\_predictive\_value \times negative\_predictive\_value} - \sqrt{false\_negative\_rate \times false\_positive\_rate \times false\_omission\_rate \times false\_discovery\_rate}}|
+#' |||
+#' |threat_score<br>critical_success_index<br>jaccard_index|\eqn{\frac{true\_positives}{true\_positives + false\_negatives + false\_positives}}|
 #'
 #' @param total_population The number of people in the entire population.
 #' @param real_positives The number of people with the condition in the population.

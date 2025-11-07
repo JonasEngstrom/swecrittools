@@ -39,6 +39,69 @@ Takes a combination of values typically found in a confusion matrix and calculat
 The function is meant as a quick way to get multiple performance metrics while experimenting with models. Nomenclature of return values is therefore informal with several redundant names for certain values, letting the the user choose their preferred terminology.
 
 Arguments are returned together with calculated values. Missing arguments are calculated, as far as sufficient data is provided. The function throws an error if insufficient data or contradictory data is provided.
+
+The following table lists the names of the variables returned by the function and describes how they are calculated.\tabular{ll}{
+   Name of Returned Value \tab Description \cr
+   total_population \tab \eqn{real\_positives + real\_negatives} \cr
+    \tab  \cr
+   real_positives \tab The number of people with the condition in the population. \cr
+    \tab  \cr
+   real_negatives \tab The number of people without the condition in the population. \cr
+    \tab  \cr
+   true_positives\if{html}{\out{<br>}}hits \tab The number of people with the condition with a positive test result. \cr
+    \tab  \cr
+   false_positives\if{html}{\out{<br>}}false_alarms\if{html}{\out{<br>}}overestimations \tab The number of people without the condition with a positive test result. \cr
+    \tab  \cr
+   true_negatives\if{html}{\out{<br>}}correct_rejections \tab The number of people without the condition with a negative test result. \cr
+    \tab  \cr
+   false_negatives\if{html}{\out{<br>}}misses\if{html}{\out{<br>}}underestimations \tab The number of people without the condition with a positive test result. \cr
+    \tab  \cr
+   predicted_positive\if{html}{\out{<br>}}test_outcome_positive \tab \eqn{true\_positives + false\_positives} \cr
+    \tab  \cr
+   predicted_negative\if{html}{\out{<br>}}test_outcome_negative \tab \eqn{true\_negatives + false\_negatives} \cr
+    \tab  \cr
+   accuracy \tab \eqn{\frac{true\_positives + true\_negatives}{real\_positives + real\_negatives}} \cr
+    \tab  \cr
+   true_positive_rate\if{html}{\out{<br>}}recall\if{html}{\out{<br>}}sensitivity\if{html}{\out{<br>}}probability_of_detection\if{html}{\out{<br>}}hit_rate\if{html}{\out{<br>}}power \tab \eqn{\frac{true\_positives}{real\_positives} = 1 - false\_negative\_rate} \cr
+    \tab  \cr
+   false_negative_rate\if{html}{\out{<br>}}miss_rate\if{html}{\out{<br>}}type_II_errors \tab \eqn{\frac{false\_negatives}{real\_positives} = 1 - true\_positive\_rate} \cr
+    \tab  \cr
+   false_positive_rate\if{html}{\out{<br>}}probability_of_false_alarm\if{html}{\out{<br>}}fall_out\if{html}{\out{<br>}}type_I_errors \tab \eqn{\frac{false\_positives}{real\_negatives} = 1 - true\_negative\_rate} \cr
+    \tab  \cr
+   true_negative_rate\if{html}{\out{<br>}}specificity\if{html}{\out{<br>}}selectivity \tab \eqn{\frac{true\_negatives}{real\_negatives} = 1 - false\_positive\_rate} \cr
+    \tab  \cr
+   prevalence \tab \eqn{\frac{real\_positives}{real\_positives + real\_negatives}} \cr
+    \tab  \cr
+   positive_predictive_value\if{html}{\out{<br>}}precision \tab \eqn{\frac{true\_positives}{true\_positives + false\_positives} = 1 - false\_discovery\_rate} \cr
+    \tab  \cr
+   f1_score \tab \eqn{2 \times \frac{positive\_predictive\_value \times true\_positive\_rate}{positive\_predictive\_value + true\_positive\_rate} = \frac{2 \times true\_positives}{2 \times true\_positives + false\_positives + false\_negatives}} \cr
+    \tab  \cr
+   false_omission_rate \tab \eqn{\frac{false\_negatives}{true\_negatives + false\_negatives} = 1 - negative\_predictive\_value} \cr
+    \tab  \cr
+   positive_likelihood_ratio \tab \eqn{\frac{true\_positive\_rate}{false\_positive\_rate}} \cr
+    \tab  \cr
+   negative_likelihood_ratio \tab \eqn{\frac{false\_negative\_rate}{true\_negative\_rate}} \cr
+    \tab  \cr
+   false_discovery_rate \tab \eqn{\frac{false\_positives}{true\_positives + false\_positives} = 1 - positive\_predictive\_value} \cr
+    \tab  \cr
+   negative_predictive_value \tab \eqn{\frac{true\_negatives}{true\_negatives + false\_negatives} = 1 - false\_omission\_rate} \cr
+    \tab  \cr
+   diagnostic_odds_ratio \tab \eqn{\frac{positive\_likelihood\_ratio}{negative\_likelihood\_ratio}} \cr
+    \tab  \cr
+   informedness\if{html}{\out{<br>}}bookmaker_informedness \tab \eqn{true\_positive\_rate + true\_negative\_rate - 1} \cr
+    \tab  \cr
+   prevalence_threshold \tab \eqn{\frac{\sqrt{true\_positive\_rate \times false\_positive\_rate} - false\_positive\_rate}{true\_positive\_rate - false\_positive\_rate}} \cr
+    \tab  \cr
+   markedness\if{html}{\out{<br>}}delta_p \tab \eqn{positive\_predictive\_value + negative\_predictive\_value - 1} \cr
+    \tab  \cr
+   balanced_accuracy \tab \eqn{\frac{true\_positive\_rate + true\_negative\_rate}{2}} \cr
+    \tab  \cr
+   fowlkes_mallows_index \tab \eqn{\sqrt{positive\_predictive\_value \times true\_positive\_rate}} \cr
+    \tab  \cr
+   phi\if{html}{\out{<br>}}matthews_correlation_coefficient \tab \eqn{\sqrt{true\_positive\_rate \times true\_negative\_rate \times positive\_predictive\_value \times negative\_predictive\_value} - \sqrt{false\_negative\_rate \times false\_positive\_rate \times false\_omission\_rate \times false\_discovery\_rate}} \cr
+    \tab  \cr
+   threat_score\if{html}{\out{<br>}}critical_success_index\if{html}{\out{<br>}}jaccard_index \tab \eqn{\frac{true\_positives}{true\_positives + false\_negatives + false\_positives}} \cr
+}
 }
 \examples{
 # The function can be called without all arguments, as long as sufficient data is provided.
