@@ -205,11 +205,6 @@ performance_metrics <- function(
     stop('Insufficient data to calculate confusion matrix.')
   }
 
-  # Check that the calculated total population is reasonable.
-  if (known_values$total_population != known_values$true_positives + known_values$false_positives + known_values$true_negatives + known_values$false_negatives) {
-    stop('Incorrect data entry.')
-  }
-
   # Calculate values derived from confusion matrix.
   known_values[['test_outcome_positive']] <- known_values[['predicted_positive']] <- known_values$true_positives + known_values$false_positives
   known_values[['test_outcome_negative']] <- known_values[['predicted_negative']] <- known_values$true_negatives + known_values$false_negatives
